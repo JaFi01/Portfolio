@@ -8,6 +8,7 @@ import Header from "./components/header.jsx";
 import Description from "./components/Description";
 import NavMenu from "./components/NavMenu";
 import SocialMedia from "./components/SocialMedia";
+import Projects from "./components/Projects";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -15,17 +16,19 @@ function App() {
     <>
       <div className="WebPageContent">
         <Container>
-          <Row className="d-flex justify-content-md-between">
-            <Col className="d-block d-md-flex flex-column justify-content-md-start position-relative sticky-top-md py-4 leftSide" xs={12} md={6}>
+          <Row className="d-flex justify-content-md-between sticky-top-md py-4">
+            <Col id="leftSideColumn" className="d-block d-md-flex flex-column justify-content-md-between position-relative pb-md-5 leftSide" xs={12} md={6}>
               <div>
                 <Header/>
                 <NavMenu />
               </div>
-              <SocialMedia/>
-  
+              <div className="">
+                <SocialMedia/>
+              </div>             
             </Col>
             <Col className="rightSide py-4" xs={12} md={6}>
               <Description />
+              <Projects />
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam
               eveniet porro ducimus fugit placeat, alias optio totam ex
               blanditiis nemo quam consequuntur delectus iusto sunt fuga
